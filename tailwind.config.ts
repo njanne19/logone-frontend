@@ -30,7 +30,15 @@ const config: Config = {
       fontFamily: { 
         sans: ["var(--font-exo-2)"],
         mono: ["var(--font-roboto-mono)"],
-      }
+      },
+      transitionProperty: {
+        height: "height",
+        spacing: "margin, padding",
+      },
+      maxHeight: {
+        '128': '32rem', // You might adjust this based on your actual content size
+        'full': '100%',
+      },
     },
   },
   plugins: [nextui()],
