@@ -1,3 +1,4 @@
+import { m } from "framer-motion";
 import type { Config } from "tailwindcss";
 const { nextui } = require("@nextui-org/react"); 
 
@@ -21,8 +22,14 @@ const config: Config = {
           pink: '#ED5C9B', 
           blue: '#748CAB', 
           cream: '#F0EBD8', 
+          cream_dark: '#e0dcc8',
+          cream_light: 'f6f3e7',
           green: '26C485', 
         }
+      }, 
+      fontFamily: { 
+        sans: ["var(--font-exo-2)"],
+        mono: ["var(--font-roboto-mono)"],
       }
     },
   },
