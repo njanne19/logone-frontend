@@ -45,6 +45,8 @@ const DetectionsOverview : React.FC<DetectionsDisplayProps> = ({ loading, error,
 
 function handleDetectionLoadingLogic (loading: boolean, error : boolean, videoData: string | null) {
 
+    console.log("From DetectionsOverview: ", loading, error, videoData)
+
     if (error) {
         return (
             <div className="flex flex-col flex-grow items-center justify-center">

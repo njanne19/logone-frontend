@@ -1,3 +1,4 @@
+'use client'; 
 const API_URL = 'http://10.0.0.46:5000';
 
 interface YoloResponse { 

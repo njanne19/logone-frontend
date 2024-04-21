@@ -22,13 +22,15 @@ export default function Editor() {
             setLoadingYolo(true); 
             try {
                 const data = await requestYolo(video);
+                console.log("YOLO Request Completed Successfully"); 
                 if (data.base64Video) {
                     setYoloData(`data:video/mp4;base64,${data.base64Video}`);
-                    console.log(data.message); 
                 }
             } catch (error) {
                 console.error('Failed to process video for yolo:', error); 
                 setYoloError(true);
+            } finally {
+                setLoadingYolo(false); 
             }
         } else {
             console.error('Yolo video is null');
