@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { Button } from "@nextui-org/react";
 import { FaExclamationTriangle } from "react-icons/fa";
 import { FaRegTimesCircle } from "react-icons/fa";
-import { Spinner } from "@nextui-org/react";
+import { Spinner, Switch } from "@nextui-org/react";
 
 interface DetectionsDisplayProps {
     loading: boolean; 
@@ -15,8 +15,9 @@ const DetectionsOverview : React.FC<DetectionsDisplayProps> = ({ loading, error,
     const [isVisible, setIsVisible] = useState<boolean>(false);
 
     return (
+        <div className="flex flex-col items-center justify-center ">
         <div className={`video-prompt-container bg-neutral-200 
-            mt-5 ml-10 mr-10 rounded-xl border-t border-b border-l border-r flex flex-col`}>
+            mt-5 ml-10 mr-10 rounded-xl border-t border-b border-l border-r flex flex-col w-7/12 max-w-7/12`}>
             
             <div className={`videoPromptHeader bg-gradient-to-b from-neutral-100
              via-neutral-50 to-neutral-100 flex flex-row items-center rounded-xl
@@ -33,13 +34,14 @@ const DetectionsOverview : React.FC<DetectionsDisplayProps> = ({ loading, error,
                     {isVisible ? 'Hide' : 'Show'}
                 </Button>
             </div>
-            <div className={`flex flex-col flex-grow items-center justify-center
+            <div className={`flex flex-col flex-grow justify-center items-center
             transition-height duration-1000 ease-in-out 
             ${isVisible ? 'min-h-96 opacity-100' : 'max-h-0 opacity-100'}
             overflow-hidden`} >
-                {handleDetectionLoadingLogic(loading, error, videoData)}
+                    {handleDetectionLoadingLogic(loading, error, videoData)}            
             </div> 
         </div>
+        </div> 
     );
 }
 

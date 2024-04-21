@@ -39,6 +39,9 @@ const config: Config = {
         '128': '32rem', // You might adjust this based on your actual content size
         'full': '100%',
       },
+      maxWidth: {
+        '7/12': '58.333333%',
+      }
     },
   },
   plugins: [nextui()],

@@ -39,7 +39,7 @@ export default function Editor() {
 
     return (
         <>
-            <div className="min-h-screen editor-container bg-neutral-50">
+            <div className="min-h-screen editor-container bg-neutral-50 pb-10">
                 <div className={`flex flex-row bg-gradient-to-b
                  from-neutral-100 via-neutral-50 to-neutral-100 
                  border-t border-b border-neutral-200`}> 

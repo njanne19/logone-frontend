@@ -68,8 +68,9 @@ const VideoPrompt : React.FC<VideoPromptProps> = ({ onVideoLoad }) => {
     }, [videoUrl]); 
 
     return (
+        <div className="flex flex-col items-center justify-center">
         <div className={`video-prompt-container bg-neutral-200 
-            mt-5 ml-10 mr-10 rounded-xl border-t border-b border-l border-r flex flex-col`}>
+            mt-5 ml-10 mr-10 rounded-xl border-t border-b border-l border-r flex flex-col w-7/12 max-w-7/12`}>
             
             <div className={`videoPromptHeader bg-gradient-to-b from-neutral-100
              via-neutral-50 to-neutral-100 flex flex-row items-center rounded-xl
@@ -107,6 +108,7 @@ const VideoPrompt : React.FC<VideoPromptProps> = ({ onVideoLoad }) => {
                 )}
             </div> 
         </div>
+        </div> 
     );
 }
 
